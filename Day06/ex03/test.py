@@ -12,14 +12,15 @@ linear_model2 = MyLR(np.array([[89.0], [-6]]))
 Y_model1 = linear_model1.predict_(Xpill)
 Y_model2 = linear_model2.predict_(Xpill)
 
-print(MyLR.mse_(Yscore, Y_model1))
+print(linear_model1.mse_(Yscore, Y_model1))
 # 57.60304285714282
 print(mean_squared_error(Yscore, Y_model1))
 # 57.603042857142825
-print(MyLR.mse_(Yscore, Y_model2))
+print(linear_model1.mse_(Yscore, Y_model2))
 # 232.16344285714285
 print(mean_squared_error(Yscore, Y_model2))
 # 232.16344285714285
 
 
-linear_model1.plot(Xpill, Yscore)
+# linear_model1.plot(Xpill, Yscore)
+linear_model1.plot_J(Xpill, Yscore)
